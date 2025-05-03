@@ -9,13 +9,15 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -47,5 +49,243 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 711px 399px;
+  grid-template-areas: "result content-details";
+  align-items: end;
+  gap: 30px;
+}
+
+.result {
+  grid-area: result;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+  border: 1px solid white;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  border: 1px solid #000;
+  outline: 1px solid #fff;
+  background-color: #fff;
+  background-position: center;
+  background-size: contain;
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox):has(:hover) {
+  text-decoration: underline;
+}
+
+.button {
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.search-form__submit-button {
+  align-self: end;
+  width: 194px;
+  height: 34px;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__textfield {
+  width: 225px;
+  height: 27px;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__details {
+  grid-area: content-details;
+}
+
+.title {
+  margin-bottom: 26px;
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list-container {
+  position: relative;
+  height: 298px;
+  overflow-y: auto;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list-item {
+  padding: 0 3px;
+}
+
+.content__list-item .content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  max-width: 200px;
+}
+
+.content__video-card-title {
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-description {
+  display: -webkit-box;
+  padding-top: 6px;
+  overflow: hidden;
+  font-weight: 400;
+  line-height: 90%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.more-button {
+  width: 100%;
+  height: 34px;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
