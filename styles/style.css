@@ -273,7 +273,7 @@ ol {
   width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: center;
+  object-position: center; 
 }
 
 .more-button {
