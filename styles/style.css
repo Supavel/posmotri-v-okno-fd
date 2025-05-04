@@ -110,7 +110,7 @@ ol {
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
-  border: 1px solid #545050;
+  border: 1px solid #1b1919;
   outline: 1px solid #fff;
   background-color: #fff;
   background-position: center;
@@ -200,6 +200,9 @@ ol {
 }
 
 .content__list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   position: relative;
   height: 298px;
   overflow-y: auto;
